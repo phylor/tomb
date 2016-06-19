@@ -8,5 +8,8 @@ RUN mkdir /tmp/tomb
 RUN tar xfz tomb.tar.gz -C /tmp/tomb --strip-components=1
 WORKDIR /tmp/tomb
 RUN make install
+RUN rm -rf /tmp/tomb
+RUN mkdir /tomb
+WORKDIR /tomb
 
-ENTRYPOINT exec tomb
+ENTRYPOINT ["tomb"]
