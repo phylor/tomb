@@ -9,4 +9,8 @@ Tomb generates encrypted storage folders to be opened and closed using their ass
 
 ## Running it
 
+**Note:** Running tomb as described here is not secure. Use for testing purposes only.
+
     docker run --rm phylor/tomb
+
+    docker run --rm -v $PWD:/tomb -v /dev/urandom:/dev/random --privileged -it -v $PWD:/media phylor/tomb
