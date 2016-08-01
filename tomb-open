@@ -1,0 +1,3 @@
+#!/bin/bash
+
+tomb open -f -k $1 $2 && cat

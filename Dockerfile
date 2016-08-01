@@ -10,6 +10,8 @@ WORKDIR /tmp/tomb
 RUN make install
 RUN rm -rf /tmp/tomb
 RUN mkdir /tomb
+COPY tomb-open /usr/local/bin/
+RUN chmod 755 /usr/local/bin/tomb-open
 WORKDIR /tomb
 
 ENTRYPOINT ["tomb"]
